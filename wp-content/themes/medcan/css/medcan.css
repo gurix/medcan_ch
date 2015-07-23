@@ -1,0 +1,195 @@
+html, body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+}
+
+/*Responsive Grid System Setup
+------------------------------------------------------------*/
+.row [class*="grid"] {
+    display: inline-block;
+    float: left;
+    margin: 0.5% 1% 0.5% 0;
+    background: #fff; /*------------------------------------- Adding default background color on grids */
+}
+.row [class*="grid"]:first-child { 
+	margin-left: 0; 
+}
+.row [class*="grid"]:last-child { 
+	margin-right: 0; 
+}
+.group{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.group:before, .group:after{
+    content: "";
+    display:table;
+}
+.group:after {
+	clear:both;
+}
+@media only screen and (min-width:769px){
+	.bodywrap {
+        max-width: 1200px;    /*------------------------------------- Set width of your site */
+        margin: 0 auto;
+	}
+	.grid1 { /* After margin right 1%, 89/12 = 7.416 */
+        width: 7.416%;
+	}
+	.grid2 { /* 95/6 = 15.833 */
+        width: 15.833%;
+	}
+	.grid3 { /* 97/4 = 24.25 */
+        width: 24.25%; 
+	}
+	.grid4 { /* 98/3 = 32.666 */
+        width: 32.666%; 
+	}
+	.grid5 { /* (100-2-15.833)/2 = 41.0835 */
+        width: 41.0835%;
+	}
+	.grid6 { /* 99/2 = 49.5 */
+        width: 49.5%;
+	}
+	.grid7 { /* (100-1-41.0835) = 57.9165 */
+        width: 57.9165%;
+	}
+	.grid8{  /* (100-1-32.666) = 66.334 */
+        width: 66.334%;
+	}
+	.grid9{  /* (100-1-24.25) = 74.75 */
+        width: 74.75%;
+	}
+	.grid10{ /* (100-1-15.833) = 83.167 */
+        width: 83.167%;
+	}
+	.grid11{ /* (100-1-7.416) = 91.584 */
+        width: 91.584%;
+	}
+	.grid12 { /* 100/1 = 100 */
+        width: 100%;
+	}
+}
+@media only screen and (max-width:768px){
+    .bodywrap {
+        padding: 0 10px;    
+    }
+    .row [class*="grid"] {
+		width:100%; 
+		padding: 0; 
+		margin: 1% auto;
+		float: none;
+	}
+	.row [class*="grid"]:first-child, .row [class*="grid"]:last-child{ 
+		margin-left: auto;
+       margin-right: auto;
+	}
+}
+
+/*Responsive Navigation Setup Pure CSS
+------------------------------------------------------------*/
+nav ul{
+    margin: 0;
+    padding: 0; 
+    list-style: none;  
+}
+nav li{
+    display: inline-block;    
+}
+nav li a{
+    display: inline-block;
+    padding: 10px;   
+}
+#onav, .onav-btn{
+    display: none;   
+}
+.side-nav{
+    margin-bottom: 10px;
+}
+.side-nav .menu li{
+    width: 100%;
+}
+
+/*Sub Menu Setup
+------------------------------------------------------------*/
+.menu-item-has-children, .page_item_has_children{
+    position: relative;
+}
+.menu-item-has-children > ul, .page_item_has_children > ul{
+    position: absolute;
+    display: none;
+    top: 38px;
+    left: 0;
+    z-index: 9999;
+}
+.menu-item-has-children ul .menu-item-has-children ul, .page_item_has_children ul .page_item_has_children ul{
+    position: static;
+    display: block;
+}
+.menu-item-has-children ul a, .page_item_has_children ul a{
+    width: 180px;
+}
+.menu-item-has-children:hover > ul, .page_item_has_children:hover > ul{
+    display: block;
+}
+
+/*Header Setup
+------------------------------------------------------------*/
+.logo, nav{
+    width: auto;
+}
+.logo{
+    float: left;
+    font-size: 20px;
+    padding-top: 8px;  
+}
+nav{
+    float: right;    
+}
+.side-nav{
+    width: 100%;
+    display: inline-block;    
+}
+
+@media only screen and (max-width:768px){
+    .onav-btn{
+        display: block;
+    }
+    .onav-btn{
+        padding: 10px 0 4px 10px;
+        cursor: pointer;
+        float: right;
+    }
+    .onav-btn:after{
+        content: "";
+        background: url('../img/nav-b.png') no-repeat; 
+        width: 20px;
+        height: 20px;
+        display: inline-block;         
+    }
+    nav{
+        float: none;    
+    }
+    nav ul{
+        display: none;
+    }
+    nav li, nav li a{
+        width: 100%;     
+    }
+    #onav:checked ~ .nav-menu,
+    #onav:checked ~ .nav-menu ul,
+    .side-nav ul{
+        display: inline-block;
+        width: 100%;  
+    }
+    .menu-item-has-children > ul,
+    .page_item_has_children > ul{
+        display: block;
+        position: static;
+    }
+}
