@@ -1,0 +1,95 @@
+/*
+Theme Name: Ohsik
+Theme URI: http://wp.ohsikpark.com
+Author: Ohsik Park
+Author URI: http://www.ohsikpark.com
+Description: Simple pure CSS responsive light weight theme for WordPress. Great starting point for your custom theme. 
+Version: 1.7.7
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive-layout, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fluid-layout, custom-menu, featured-images, microformats, post-formats, sticky-post
+Text Domain: Ohsik
+*/
+/*Import default CSS. Don't delete unless you know what you are doing.
+------------------------------------------------------------*/
+@import url('css/ohsik.css');
+
+/*Wordpress required Classes
+------------------------------------------------------------*/
+.wp-caption{
+}
+.wp-caption-text{ 
+}
+.sticky{
+}
+.gallery-caption{
+}
+.bypostauthor{ 
+}
+.alignright{
+}
+.alignleft{
+}
+.aligncenter{
+}
+.row [class*="grid"] div{ 
+    max-width: 100%; /*To Prevent layout breaking for inline fixed width*/ 
+}
+
+/*Things you probably want on your site
+------------------------------------------------------------*/
+a > img{
+    border: 0 !important;
+}
+iframe, embed, img{
+	max-width: 100%;
+	height: auto;	
+}
+.comments-area ol.comment-list{
+    padding: 0;
+    list-style: none;    
+}
+pre{
+    word-break: break-word;    
+}
+
+/*------------------------------------------------------------
+--------------------------------------------------------------
+          
+      Below code is for Display Purpose only.
+      Feel free to delete CSS code below and
+      add your own custom CSS.
+      
+      Using a child theme is definitely a better idea!
+      So you don't have to worry about updating theme :)
+      
+      https://codex.wordpress.org/Child_Themes
+            
+--------------------------------------------------------------
+------------------------------------------------------------*/
+html,body{
+    font-family: Verdana;
+    font-size: 14px;
+}
+header{
+    border-bottom: 1px solid #ddd;    
+}
+footer{
+    border-top: 1px solid #ddd;    
+}
+.row [class*="grid"]{
+    padding: 10px;    
+}
+.row [class*="grid"] article{
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #ddd;    
+}
+.row [class*="grid"] article footer{
+    padding: 20px 0;
+}
+footer.bodywrap, ul.children{
+    background: #ddd; 
+}
+nav ul li > ul{
+    background: #eee;    
+}
