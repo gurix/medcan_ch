@@ -17,11 +17,10 @@ light green = C5E0BB
 /*Wordpress editor styles start*/
 body {
 	font-family: Verdana;
+	font-size: 12pt;
 	padding: 10px;
 }
-html, body {
-    height: 100%;
-}
+
 a, a:hover {
 	text-decoration: none;
 }
