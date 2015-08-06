@@ -3,7 +3,7 @@
 	<div class="col-md-9 col-sm-12" id="leftside">
 		<div id="logo">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+					<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" width="292" alt="<?php bloginfo( 'name' ); ?>">
 				</a>
 		</div>
 		<nav class="navbar navbar-default" role="navigation">
