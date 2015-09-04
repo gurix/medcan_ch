@@ -69,7 +69,7 @@
 			<a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
 		</div>
 		<div id="contactlink">
-			<a href="mailto: medcan@gmx.ch">Kontakt</a>
+			<a href="/kontakt/">Kontakt</a>
 		</div>
 		<nav id="subnav" class="hidden-xs hidden-sm">
 		
